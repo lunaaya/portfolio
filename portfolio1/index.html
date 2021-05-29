@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ＡYASE　MATSUMOTO</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="title_left">
+                    <h1>Ayase Matsumoto</h1>
+                </div>
+            </div>
+            <div class="menu_li">
+                <ul class="nav_menu"> 
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="top_photo">
+        <img class="top_img" src="./img/top_photo_i.png" alt="">
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about" id="about">
+        <div class="container">
+            <h1 class="ttl">ABOUT</h1>
+            <div class="wrapper">
+                <div class="about_photo">
+                    <img src="./img/face1.JPG" alt="">
+                </div>
+                <div class="about_txt">
+                    <p class="about_name">松本礼聖　　<span>AYASE MATSUMOTO</span></p>
+                    <p class="about_main_txt"> 高校は情報化に進みITの基礎の基礎を学び、京都コンピュータ学院でさらなる知識を得ました。<br>
+                     例えば、高校では少ししか触れていなかったプログラミングなど今では多くの言語に触れています。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILL -->
+    <div class="skill" id="skill">
+        <div class="container">
+            <h1 class="ttl">SKILL</h1>
+            <div class="contents">
+                <div class="skill_inv fadein">
+                    <h1>HTML</h1>
+                    <i class="fab fa-html5 fa-5x"></i>
+                    <div class="skill_txt">
+                        基本的なスキル、組み立て可能 京都コンピュータ学院修学中１回生時に HTML・CSS実習という科目を履修
+                    </div>
+                </div>
+
+                <div class="skill_inv fadein">
+                    <h1>CSS</h1>
+                    <i class="fab fa-css3-alt fa-5x"></i>
+                    <div class="skill_txt">
+                        基本的なスキル、組み立て可能 京都コンピュータ学院修学中１回生時に HTML・CSS実習という科目を履修
+                    </div>
+                </div>
+
+                <div class="skill_inv fadein">
+                    <h1>JavaScript</h1>
+                    <i class="fab fa-js fa-5x"></i>
+                        <div class="skill_txt">
+                            本を購入し、基本的なコード、jquery組み立て可能　簡単なハンバーガーメニューをjqueryで作成
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WORK -->
+        <div class="work" id="work">
+            <div class="container">
+                <h1 class="ttl">WORK</h1>
+                
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(function (){
+                $(window).scroll(function () {
+                    $('.fadein').each(function () {
+                        var targetElement = $(this).offset().top;
+                        var scroll = $(window).scrollTop();
+                        var windowHeight = $(window).height();
+                        if(scroll > targetElement - windowHeight + 150) {
+                            $(this).addClass('scrollin');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
